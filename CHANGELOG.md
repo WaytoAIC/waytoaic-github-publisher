@@ -6,6 +6,12 @@ The format is intentionally simple and optimized for release notes and repositor
 
 ## [Unreleased]
 
+## [v1.0.1] - 2026-03-20
+
+### Changed
+
+- Quieted installer fallback behavior so version-pinned installs no longer print a harmless `404` before succeeding
+
 ## [v1.0.0] - 2026-03-20
 
 First public release.

@@ -98,10 +98,10 @@ download_archive() {
   tag_url="https://github.com/$REPO/archive/refs/tags/$REF.tar.gz"
 
   if command -v curl >/dev/null 2>&1; then
-    if curl -fsSL "$branch_url" -o "$ARCHIVE_PATH"; then
+    if curl -fsL "$branch_url" -o "$ARCHIVE_PATH"; then
       return 0
     fi
-    curl -fsSL "$tag_url" -o "$ARCHIVE_PATH"
+    curl -fsL "$tag_url" -o "$ARCHIVE_PATH"
     return 0
   fi
 

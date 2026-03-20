@@ -37,17 +37,17 @@ Way to AIC 不是教学，不是工具，而是一条所有电商人共同走的
 
 ```bash
 # Codex
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.0/install.sh | bash -s -- --target codex --ref v1.0.0
+curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target codex --ref v1.0.1
 ```
 
 ```bash
 # OpenClaw
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.0/install.sh | bash -s -- --target openclaw --ref v1.0.0
+curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target openclaw --ref v1.0.1
 ```
 
 ```bash
 # OpenClaw workspace-local skills/
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.0/install.sh | bash -s -- --dest "$(pwd)/skills" --ref v1.0.0
+curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --dest "$(pwd)/skills" --ref v1.0.1
 ```
 
 复制即用。安装后重启 Codex / OpenClaw。
@@ -89,7 +89,7 @@ curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publish
 固定到版本：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.0/install.sh | bash -s -- --target codex --ref v1.0.0
+curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target codex --ref v1.0.1
 ```
 
 ### 推荐使用方式
