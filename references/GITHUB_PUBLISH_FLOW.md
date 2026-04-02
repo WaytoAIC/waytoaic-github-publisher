@@ -2,6 +2,14 @@
 
 Use this checklist when publishing a skill repository under the Way to AIC workflow.
 
+## 0. Scope and path resolution
+
+- `skill_dir`: the installed folder that contains this reference file, the README prefix template, and other bundled helpers.
+- `repo_dir`: the repository that will actually be edited, committed, pushed, tagged, or released.
+- Resolve helper files such as `assets/README_PREFIX_WAYTOAIC.md` relative to `skill_dir`.
+- Run git and GitHub operations inside `repo_dir`, not inside `skill_dir`, unless the user explicitly wants to maintain the skill package repo itself.
+- If the current workspace is not a git repo, identify `repo_dir` before running `git status --short -b`.
+
 ## 1. Existing skill update
 
 | Step | Action | Notes |

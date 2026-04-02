@@ -2,7 +2,7 @@
 
 set -eu
 
-REPO="restart2000/waytoaic-github-publisher"
+REPO="WaytoAIC/waytoaic-github-publisher"
 REF="main"
 SKILL_NAME="waytoaic-github-publisher"
 TARGET="auto"
@@ -23,7 +23,7 @@ Options:
   --target   Install target. auto|codex|openclaw. Default: auto
   --dest     Override the skills root directory. The script installs into DIR/waytoaic-github-publisher
   --ref      Branch or tag to install. Default: main
-  --repo     GitHub repo in OWNER/REPO form. Default: restart2000/waytoaic-github-publisher
+  --repo     GitHub repo in OWNER/REPO form. Default: WaytoAIC/waytoaic-github-publisher
   -h, --help Show this help
 EOF
 }

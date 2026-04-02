@@ -7,6 +7,14 @@ description: Standard workflow for creating a new Codex/OpenClaw skill repo or u
 
 Use this skill when the task is about shipping a skill repository, not when the user only wants to edit the skill logic.
 
+## Path model
+
+- Treat the directory containing this `SKILL.md` as `skill_dir`. Use it only for bundled helper files such as `assets/README_PREFIX_WAYTOAIC.md` and `references/GITHUB_PUBLISH_FLOW.md`.
+- Treat the repository being published as `repo_dir`. This is usually the user's current workspace git root or an explicit path provided by the user.
+- Resolve relative helper paths against `skill_dir`, not against the user's current working directory and not against `repo_dir`.
+- Run `git`, `gh`, tagging, release, and push commands inside `repo_dir`. Do not run publish commands inside the installed skill copy unless the user explicitly says this skill folder itself is the repo to maintain.
+- If the current workspace is not a git repo, do not start with `git status`. First identify `repo_dir`, then continue the audit there.
+
 ## Default Way to AIC baseline
 
 - Put the Way to AIC prefix block at the top of the README. Copy from [assets/README_PREFIX_WAYTOAIC.md](assets/README_PREFIX_WAYTOAIC.md) unless the user says not to.
@@ -18,19 +26,21 @@ Use this skill when the task is about shipping a skill repository, not when the 
 
 ## First pass audit
 
-1. Run `git status --short -b`.
-2. Inspect `README.md`, `CHANGELOG.md`, `install.sh`, license files, and current release state.
-3. Check GitHub auth with `gh auth status`.
-4. Decide which path applies:
+1. Identify `repo_dir`.
+2. Read [references/GITHUB_PUBLISH_FLOW.md](references/GITHUB_PUBLISH_FLOW.md) from `skill_dir` before editing.
+3. If `repo_dir` is a git repo, run `git status --short -b` there. If it is not a git repo yet, inspect the folder first and treat it as a possible first-publish path.
+4. Inspect `README.md`, `CHANGELOG.md`, `install.sh`, license files, and current release state inside `repo_dir`.
+5. Check GitHub auth with `gh auth status`.
+6. Decide which path applies:
    - existing skill update
    - new skill creation and first publish
-5. Read [references/GITHUB_PUBLISH_FLOW.md](references/GITHUB_PUBLISH_FLOW.md) before editing.
 
 ## Editing rules
 
 - Use small patches and preserve user writing when it is already stronger than the old version.
 - Keep README top sections readable on GitHub mobile and desktop.
 - When the repo belongs to the Way to AIC umbrella, keep the brand prefix above project-specific install instructions.
+- When copying helper content, load it from `skill_dir/assets/...` or `skill_dir/references/...` rather than assuming those paths exist inside `repo_dir`.
 - Only embed screenshots, logos, or QR codes when you have real file paths or stable hosted URLs.
 - If release notes are updated, keep the Chinese and English sections aligned.
 
@@ -40,6 +50,7 @@ Use this skill when the task is about shipping a skill repository, not when the 
 - For new repositories, create the skill package first, then the public repo surface, then publish.
 - Validate before pushing: YAML/script syntax, installer smoke test, and git cleanliness.
 - If the user asks for a tag or GitHub Release, do not leave the repo in a half-published state. Push commits first, then tag, then publish or update the release.
+- If the installed skill copy and the target publish repo are different locations, always read helpers from `skill_dir` and write changes only to `repo_dir`.
 
 ## Report back
 

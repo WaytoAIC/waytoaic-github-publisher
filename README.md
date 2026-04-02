@@ -37,17 +37,17 @@ Way to AIC 不是教学，不是工具，而是一条所有电商人共同走的
 
 ```bash
 # Codex
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target codex --ref v1.0.1
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target codex --ref v1.0.1
 ```
 
 ```bash
 # OpenClaw
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target openclaw --ref v1.0.1
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target openclaw --ref v1.0.1
 ```
 
 ```bash
 # OpenClaw workspace-local skills/
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --dest "$(pwd)/skills" --ref v1.0.1
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --dest "$(pwd)/skills" --ref v1.0.1
 ```
 
 复制即用。安装后重启 Codex / OpenClaw。
@@ -66,6 +66,7 @@ curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publish
 ### 这个 skill 会帮你做什么
 
 - 审核当前 skill 仓库状态
+- 区分技能安装目录与实际要发布的目标仓库目录，避免在错误路径执行 `git` / `gh`
 - 维护符合 Way to AIC 风格的 README 顶部品牌前缀
 - 补齐 `install.sh`、`CHANGELOG.md`、license、release notes
 - 创建 GitHub 仓库并推送 `main`
@@ -83,13 +84,13 @@ curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publish
 安装最新版：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/main/install.sh | bash -s -- --target codex
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/main/install.sh | bash -s -- --target codex
 ```
 
 固定到版本：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/restart2000/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target codex --ref v1.0.1
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target codex --ref v1.0.1
 ```
 
 ### 推荐使用方式
@@ -120,6 +121,7 @@ It is designed for two common cases:
 ### What it helps with
 
 - auditing the current skill repository state
+- separating the installed skill directory from the actual publish target repo so git operations run in the right place
 - keeping the Way to AIC brand prefix at the top of the README
 - preparing `install.sh`, `CHANGELOG.md`, license files, and release notes
 - creating the GitHub repository and pushing `main`
