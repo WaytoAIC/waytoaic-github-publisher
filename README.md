@@ -72,17 +72,17 @@
 
 ```bash
 # Codex
-curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target codex --ref v1.0.1
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.2/install.sh | bash -s -- --target codex --ref v1.0.2
 ```
 
 ```bash
 # OpenClaw
-curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target openclaw --ref v1.0.1
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.2/install.sh | bash -s -- --target openclaw --ref v1.0.2
 ```
 
 ```bash
 # OpenClaw workspace-local skills/
-curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --dest "$(pwd)/skills" --ref v1.0.1
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.2/install.sh | bash -s -- --dest "$(pwd)/skills" --ref v1.0.2
 ```
 
 复制即用。安装后重启 Codex / OpenClaw。
@@ -125,7 +125,7 @@ curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/
 固定到版本：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.1/install.sh | bash -s -- --target codex --ref v1.0.1
+curl -fsSL https://raw.githubusercontent.com/WaytoAIC/waytoaic-github-publisher/v1.0.2/install.sh | bash -s -- --target codex --ref v1.0.2
 ```
 
 ### 推荐使用方式

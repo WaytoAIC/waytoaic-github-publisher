@@ -6,6 +6,10 @@ The format is intentionally simple and optimized for release notes and repositor
 
 ## [Unreleased]
 
+No unreleased changes.
+
+## [v1.0.2] - 2026-04-27
+
 ### Changed
 
 - Clarified the skill's path model so helper files resolve from the installed skill directory while git and release commands run in the actual target repository
