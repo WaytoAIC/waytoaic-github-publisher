@@ -16,7 +16,7 @@ Use this checklist when publishing a skill repository under the Way to AIC workf
 |---|---|---|
 | Audit | Review `git status`, README, changelog, installer, license, and current releases. | Preserve user-polished README layout instead of replacing it. |
 | Skill update | Apply the actual logic or documentation changes first. | Keep edits scoped and testable. |
-| README refresh | Keep the Way to AIC prefix at the top and preserve bilingual install guidance. | Reuse `assets/README_PREFIX_WAYTOAIC.md` when needed. |
+| README refresh | Keep the Way to AIC prefix at the top and preserve bilingual install guidance. | Reuse `assets/README_PREFIX_WAYTOAIC.md` when needed; preserve its hosted images and widths. |
 | Changelog | Update `Unreleased` with user-visible changes. | Keep entries compact and release-friendly. |
 | Validation | Run syntax checks, YAML parsing, or installer smoke tests. | Use the smallest realistic verification that proves the change. |
 | Git push | Commit with a clear message and push `main`. | Confirm the worktree is clean afterward. |
@@ -27,7 +27,7 @@ Use this checklist when publishing a skill repository under the Way to AIC workf
 | Step | Action | Notes |
 |---|---|---|
 | Skill package | Create `SKILL.md` first, then add only the references, scripts, and assets that are truly needed. | Keep the skill concise. |
-| README | Start with the Way to AIC prefix, then add quick install, use cases, structure, and license notes. | Default to bilingual CN/EN. |
+| README | Start with the Way to AIC prefix, then add quick install, use cases, structure, and license notes. | Default to bilingual CN/EN; keep the prefix visual style aligned with `WaytoAIC/reddit-market-monitor`. |
 | Public repo files | Add `.gitignore`, `CHANGELOG.md`, `install.sh`, and license files if the repo is meant to be shared. | The install path should work for Codex and OpenClaw. |
 | License wording | If usage is allowed but commercial use is blocked, say source-available. | Avoid calling it open source in the OSI sense. |
 | Git setup | Initialize git, create `main`, commit, and verify `gh auth status`. | Run `gh auth setup-git` when push auth needs wiring. |
@@ -53,6 +53,7 @@ Use this checklist when publishing a skill repository under the Way to AIC workf
 | Git | `git status --short -b` is understood before work and clean after push |
 | Auth | `gh auth status` succeeds before any GitHub operations |
 | Syntax | Relevant YAML, shell, Node, or Python files parse cleanly |
+| README images | Hosted prefix image URLs return a valid response before push |
 | Installer | `install.sh` works against a temp destination or test skill directory |
 | Release | Tag, release URL, and remote branch state all match |
 
@@ -60,6 +61,6 @@ Use this checklist when publishing a skill repository under the Way to AIC workf
 
 - Default branch: `main`
 - Release style: bilingual Chinese/English
-- README style: top brand block, quick install near the top, then Chinese and English sections
+- README style: top brand block with the Way to AIC image prefix, quick install near the top, then Chinese and English sections
 - Install examples: include both `main` and version-pinned commands when useful
 - Final user summary: concise and outcome-first

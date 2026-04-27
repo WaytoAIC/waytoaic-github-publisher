@@ -18,6 +18,7 @@ Use this skill when the task is about shipping a skill repository, not when the 
 ## Default Way to AIC baseline
 
 - Put the Way to AIC prefix block at the top of the README. Copy from [assets/README_PREFIX_WAYTOAIC.md](assets/README_PREFIX_WAYTOAIC.md) unless the user says not to.
+- Treat the current `WaytoAIC/reddit-market-monitor` README prefix as the visual baseline for Way to AIC repos: keep the emoji section titles, centered image HTML, and image widths unless the user provides a newer baseline.
 - Public repos should default to bilingual Chinese/English README and release notes unless the user asks for a single language.
 - Prefer one-command installation with `install.sh` supporting `--target codex`, `--target openclaw`, `--dest`, `--ref`, and `--repo`.
 - Maintain `CHANGELOG.md` with an `Unreleased` section.
@@ -41,6 +42,7 @@ Use this skill when the task is about shipping a skill repository, not when the 
 - Keep README top sections readable on GitHub mobile and desktop.
 - When the repo belongs to the Way to AIC umbrella, keep the brand prefix above project-specific install instructions.
 - When copying helper content, load it from `skill_dir/assets/...` or `skill_dir/references/...` rather than assuming those paths exist inside `repo_dir`.
+- When copying the Way to AIC prefix, preserve the hosted `github.com/user-attachments/assets/...` image URLs from the template and verify them if images appear broken.
 - Only embed screenshots, logos, or QR codes when you have real file paths or stable hosted URLs.
 - If release notes are updated, keep the Chinese and English sections aligned.
 

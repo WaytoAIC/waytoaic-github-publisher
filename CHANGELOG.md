@@ -10,6 +10,7 @@ The format is intentionally simple and optimized for release notes and repositor
 
 - Clarified the skill's path model so helper files resolve from the installed skill directory while git and release commands run in the actual target repository
 - Updated README and installer defaults to use the canonical `WaytoAIC/waytoaic-github-publisher` GitHub path
+- Replaced the simplified Way to AIC README prefix with the image-based `reddit-market-monitor` baseline and added image-preservation guidance
 
 ## [v1.0.1] - 2026-03-20
 
